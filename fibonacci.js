@@ -20,3 +20,16 @@ function fibonacci(n) {
   console.log(fibonacci(10)); // Expected 55
   console.log(fibonacci(1)); // Expected 1
   console.log(fibonacci(42)); // Expected 267914296
+
+// Recursive version
+function recFibonacci(n) {
+  // Extremely elegant, but slower than the iterative version.
+  if (n === 1 || n === 2) return 1; // This would be our base case
+  else if (n === 0) return 0;
+  return recFibonacci(n - 1) + recFibonacci(n - 2); // And here is the recursive step
+}
+ 
+console.log(recFibonacci(100)); // Expected 3.5422484817926E+20
+console.log(recFibonacci(10)); // Expected 55
+console.log(recFibonacci(1)); // Expected 1
+console.log(recFibonacci(42)); // Expected 267914296
