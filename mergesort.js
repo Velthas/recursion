@@ -20,7 +20,7 @@ function mergeSort(arr) {
       // then it means the remaining one (which is already sorted)
       // can be tacked to the end of the sorted one
       if (leftarr[0] === undefined || rightarr[0] === undefined) {
-        remainingArray = leftarr[0] === undefined ? rightarr : leftarr;
+        const remainingArray = leftarr[0] === undefined ? rightarr : leftarr;
         return sortedArray.concat(remainingArray);
       }
    
